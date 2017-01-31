@@ -28,3 +28,7 @@ form {
   font-size: 5em;
   margin-top: 150px;
 }
+
+.btn-danger {
+  margin-top: 5px;
+}
