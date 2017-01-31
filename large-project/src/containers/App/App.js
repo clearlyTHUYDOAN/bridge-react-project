@@ -49,7 +49,7 @@ export default class App extends Component {
               </div>
             </div> 
         </form>
-        <Movies movies={this.state.movies} results={this.state.noResults}/>
+        <Movies movies={this.state.movies}/>
       </div>
     );
   }
