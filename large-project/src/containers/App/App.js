@@ -27,12 +27,11 @@ export default class App extends Component {
             this.setState ({
               movies: response.Search,
             })
+            console.log(response.Search);
           } 
           else if (response.Response === "False"){
             console.log("No results were found.")
-            this.setState ({
-              movies: "No results found." // To pass as a ternary result except my ternary didn't work... 
-            })
+            console.log(this.state.movies);
           }
     });
   }
