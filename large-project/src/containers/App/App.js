@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Movies from '../Movies/movies';
-
 import './App.css';
 
 export default class App extends Component {
@@ -43,7 +42,7 @@ export default class App extends Component {
               </div>
             </div> 
         </form>
-        <Movies test={this.state.movies}/>
+        <Movies movies={this.state.movies}/>
       </div>
     );
   }

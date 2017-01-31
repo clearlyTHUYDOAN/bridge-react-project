@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-// import $ from 'jquery';
 
-export default class Movies extends Component {
+const Movies = (props) => (
+    <div>
+        <h3>Search Results</h3>
+        <ul>
+            {props.movies.map((movie, index) => 
+                <li key={index}>{movie.Title} </li>
+            )}
+        </ul>
+    </div>)
 
-    render() {
+export default Movies;
 
-        return (
-        <div>
-            <h3>Search Results</h3>
-            <ul>
-                {this.props.test.map((movie, index) => 
-                    <li key={index}>{movie.Title} </li>
-                )}
-            </ul>
-        </div>)
-    }
-}
 
