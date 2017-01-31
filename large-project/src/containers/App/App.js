@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Movies from '../Movies/movies';
+// import Movie from '../../components/movie';
 import './App.css';
 
 export default class App extends Component {
@@ -28,7 +29,6 @@ export default class App extends Component {
           if (response.Response === "True") {
             this.setState ({
               movies: response.Search,
-              results: true
             })
             console.log(response.Search);
           } 
@@ -40,6 +40,9 @@ export default class App extends Component {
 
   handleMovie(movie) {
     console.log(movie);
+    this.setState ({
+      movie: movie
+    })
   }
 
   render() {
