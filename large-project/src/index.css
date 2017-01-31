@@ -6,3 +6,7 @@ body {
   background-color: rgb(35, 14, 45);
   color: white;
 }
+
+h3 {
+  color: red;
+}
