@@ -23,9 +23,16 @@ export default class App extends Component {
     
     $.get(requestUrl)
         .then(response => {
-        this.setState ({
-            movies: response.Search
-        })
+          if (response.Response === "True") {
+            this.setState ({
+              movies: response.Search
+            })
+          } 
+          else if (response.Response === "False"){
+            this.setState ({
+              movies: "No results were found."
+            })
+          }
     });
   }
 

@@ -1,10 +1,11 @@
 import React from 'react';
 
+
 const Movies = (props) => (
     <div>
         <h3>Search Results</h3>
         <ul>
-            {props.movies.map((movie, index) => 
+            {props.movies.Response === "False" ? props.movies : props.movies.map((movie, index) => 
                 <li key={index}>{movie.Title} </li>
             )}
         </ul>
