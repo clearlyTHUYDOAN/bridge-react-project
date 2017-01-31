@@ -8,6 +8,7 @@ export default class App extends Component {
     return (
       <div>
         <h1>OMDb API</h1>
+        <Link to="/movies">Movies</Link>
       </div>
     );
   }
