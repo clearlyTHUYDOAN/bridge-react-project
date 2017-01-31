@@ -7,6 +7,24 @@ body {
   color: white;
 }
 
+.App h3 {
+  margin-top: 100px;
+  color: red;
+}
+
 h3 {
   color: red;
+}
+
+#searchMovieInput {
+  margin-left: 200px;
+}
+
+form {
+  margin-top: 100px;
+}
+
+.appTitle {
+  font-size: 5em;
+  margin-top: 150px;
 }

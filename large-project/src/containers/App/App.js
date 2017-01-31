@@ -9,9 +9,11 @@ export default class App extends Component {
 
     this.state = {
         movies: [],
+        movie: ""
     }
 
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleMovie = this.handleMovie.bind(this);
   }
 
   handleSearch() {
@@ -36,19 +38,25 @@ export default class App extends Component {
     });
   }
 
-  handleMovie() {
-    
+  handleMovie(movie) {
+    this.setState ({
+      movie: movie
+    })
   }
 
   render() {
     return (
-      <div>
-        <h1>OMDb API</h1>
+      <div className="App">
+        <h1 className="appTitle">OMDb API</h1>
         <form className="form-horizontal">
             <div className="form-group form-group-lg">
-              <div className="col-md-8">
-                <input className="form-control" type="text" id="searchMovieInput" placeholder="Welcome to our movie database."/>
-                <button onClick={this.handleSearch} type="button" className="btn btn-danger">Search</button>
+              <div className="row">
+                <div className="col-md-8">
+                  <input className="form-control" type="text" id="searchMovieInput" placeholder="Welcome to our movie database."/>
+                </div>
+                <div className="col-md-4">
+                  <button onClick={this.handleSearch} type="button" className="btn btn-danger">Search</button>
+                </div>
               </div>
             </div> 
         </form>
