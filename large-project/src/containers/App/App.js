@@ -25,12 +25,13 @@ export default class App extends Component {
         .then(response => {
           if (response.Response === "True") {
             this.setState ({
-              movies: response.Search
+              movies: response.Search,
             })
           } 
           else if (response.Response === "False"){
+            console.log("No results were found.")
             this.setState ({
-              movies: "No results were found."
+              movies: "No results found."
             })
           }
     });
@@ -48,7 +49,7 @@ export default class App extends Component {
               </div>
             </div> 
         </form>
-        <Movies movies={this.state.movies}/>
+        <Movies movies={this.state.movies} results={this.state.noResults}/>
       </div>
     );
   }
