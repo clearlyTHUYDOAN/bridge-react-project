@@ -26,6 +26,7 @@ export default class App extends Component {
           if (response.Response === "True") {
             this.setState ({
               movies: response.Search,
+              results: true
             })
             console.log(response.Search);
           } 
@@ -48,7 +49,7 @@ export default class App extends Component {
               </div>
             </div> 
         </form>
-        <Movies movies={this.state.movies}/>
+        <Movies movies={this.state.movies} results={this.state.results}/>
       </div>
     );
   }
