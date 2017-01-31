@@ -9,3 +9,8 @@ export const Routes = () => // you cannot export default a const here. only a cl
     <Route path="/" component={App} />
     <Route path="movie" component={Movie} />
 </Router>);
+
+// Rule of thumb: All components that are directly associated with routes -should- be 
+// containers, ie, class based components.
+
+// Route based components need to have intelligence...so that any url can be shared.
