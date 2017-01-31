@@ -7,7 +7,7 @@ const Movies = (props) => (
         <h3>Search Results</h3>
         <ul>
             {props.movies.length !== 0 ? props.movies.map((movie, index) => 
-                <Link to="/movie" key={index}><li>{movie.Title}</li></Link>
+                <Link onClick={(eventToIgnore) => props.click(movie)} to="/movie"  key={index}><li>{movie.Title}</li></Link>
             ) : <li>Results have yet been found but we're optimistic for next time.</li>}
         </ul>
     </div>)

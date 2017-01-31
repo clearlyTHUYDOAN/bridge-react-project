@@ -39,9 +39,7 @@ export default class App extends Component {
   }
 
   handleMovie(movie) {
-    this.setState ({
-      movie: movie
-    })
+    console.log(movie);
   }
 
   render() {
@@ -52,7 +50,7 @@ export default class App extends Component {
             <div className="form-group form-group-lg">
               <div className="row">
                 <div className="col-md-8">
-                  <input className="form-control" type="text" id="searchMovieInput" placeholder="Welcome to our movie database."/>
+                  <input className="form-control" type="text" id="searchMovieInput" placeholder="Let's look for a great movie."/>
                 </div>
                 <div className="col-md-4">
                   <button onClick={this.handleSearch} type="button" className="btn btn-danger">Search</button>
@@ -60,7 +58,7 @@ export default class App extends Component {
               </div>
             </div> 
         </form>
-        <Movies movies={this.state.movies} results={this.state.results}/>
+        <Movies click={this.handleMovie} movies={this.state.movies} results={this.state.results}/>
       </div>
     );
   }
