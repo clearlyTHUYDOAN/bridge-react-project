@@ -32,7 +32,6 @@ export default class App extends Component {
           } 
           else if (response.Response === "False"){
             console.log("No results were found.")
-            console.log(this.state.movies);
           }
     });
   }
