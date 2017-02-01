@@ -16,6 +16,16 @@ export default class Movies extends Component {
     }
 }
 
+//movie.imdbID will be the value of the this.params property defined in routes.
+
+
+
+
+
+
+
+
+
 // const Movies = (props) => (
 //     <div>
 //         <h3>Search Results</h3>

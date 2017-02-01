@@ -11,10 +11,6 @@ export default class Movie extends Component {
     }
 
     componentDidMount() {
-        // console.log(this.props.params);
-        // console.log(this.props.params.imdbID);
-
-        // http://www.omdbapi.com/?i=tt0086197&plot=full&r=json
 
         let baseUrl = "http://www.omdbapi.com/?i=";
         let parameters = "&plot=full&r=json";
@@ -23,7 +19,6 @@ export default class Movie extends Component {
 
         $.get(requestUrl)
         .then(response => {
-            // console.log(response);
             this.setState ({
               movie: response
             })
