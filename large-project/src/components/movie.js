@@ -14,6 +14,15 @@ export default class Movie extends Component {
     }
 }
 
+// Note:
+// It is not mandatory for all component logic to be in one component. Let logic occur where it makes sense.
+
+
+
+
+
+
+
 // const Movie = (props) => (
 //     <div>
 //         <h3>Movie Details:</h3>
