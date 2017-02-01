@@ -9,7 +9,7 @@ export default class Movies extends Component {
         <h3>Search Results</h3>
         <ul>
             {this.props.movies.length !== 0 ? this.props.movies.map((movie, index) => 
-                <Link onClick={(eventToIgnore) => this.props.click(movie)} to="/movie/:movieName" key={index}><li>{movie.Title}</li></Link>
+                <Link onClick={(eventToIgnore) => this.props.click(movie)} to={`movie/${movie.imdbID}`} key={index}><li>{movie.Title}</li></Link>
             ) : <li>Results have yet been found but we're optimistic for next time.</li>}
         </ul>
     </div>)
