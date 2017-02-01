@@ -33,7 +33,9 @@ export default class Movie extends Component {
         <div className="Movie">
             <h3>{movie.Title}</h3>
             <img src={`${movie.Poster}`} role="presentation" className="moviePoster" />
-            <p>{movie.Plot} ({movie.Year})</p>
+            <div className="plotContainer">
+                <p>{movie.Plot}</p>
+            </div>
         </div>)
     }
 }
