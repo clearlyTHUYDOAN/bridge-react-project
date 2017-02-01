@@ -18,7 +18,7 @@ export default class App extends Component {
 
   handleSearch() {
     let baseUrl = "http://www.omdbapi.com/?s=";
-    let parameters = "&y=&plot=short&r=json&type=movie"
+    let parameters = "&y=&plot=short&r=json&type=movie";
     let input = $('#searchMovieInput').val();
     let searchQuery = input.replace(" ", "+");
     let requestUrl = baseUrl + searchQuery + parameters;
