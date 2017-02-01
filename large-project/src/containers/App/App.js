@@ -31,6 +31,7 @@ export default class App extends Component {
               movies: response.Search,
             })
             console.log(response.Search);
+            $("#searchMovieInput").value = ""; // how to clear form input field after search? this doesn't do anything as of now'
           } 
           else if (response.Response === "False"){
             console.log("No results were found.")
