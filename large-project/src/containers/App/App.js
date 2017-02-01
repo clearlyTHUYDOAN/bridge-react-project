@@ -10,9 +10,8 @@ export default class App extends Component {
 
     this.state = {
         movies: [],
-        movie: ""
     }
-
+  
     this.handleSearch = this.handleSearch.bind(this);
     this.handleMovie = this.handleMovie.bind(this);
   }
@@ -40,9 +39,6 @@ export default class App extends Component {
 
   handleMovie(movie) {
     console.log(movie);
-    this.setState ({
-      movie: movie
-    })
   }
 
   render() {
