@@ -16,7 +16,8 @@ export default class App extends Component {
     this.handleMovie = this.handleMovie.bind(this);
   }
 
-  handleSearch() {
+  handleSearch(e) {
+    e.preventDefault();
     let baseUrl = "http://www.omdbapi.com/?s=";
     let parameters = "&y=&plot=short&r=json&type=movie";
     let input = $('#searchMovieInput').val();
@@ -52,7 +53,7 @@ export default class App extends Component {
                   <input className="form-control" type="text" id="searchMovieInput" placeholder="Let's look for a great movie."/>
                 </div>
                 <div className="col-md-4">
-                  <button onClick={this.handleSearch} type="button" className="btn btn-danger">Search</button>
+                  <button onClick={this.handleSearch} type="submit" className="btn btn-danger">Search</button>
                 </div>
               </div>
             </div> 

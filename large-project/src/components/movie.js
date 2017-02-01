@@ -35,13 +35,10 @@ export default class Movie extends Component {
         const { movie } = this.state;
 
         return (
-        <div>
-            <h3>Movie Details:</h3>
-            <img src={`${movie.Poster}`} />
-            <p>{movie.Title}</p>
-            <p>{movie.Type}</p>
-            <p>{movie.Year}</p>
-            <p>{movie.imdbID}</p>
+        <div className="Movie">
+            <h3>{movie.Title}</h3>
+            <img src={`${movie.Poster}`} role="presentation" className="moviePoster" />
+            <p>{movie.Plot} ({movie.Year})</p>
         </div>)
     }
 }
