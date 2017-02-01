@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 export default class Movies extends Component {
     render() {
-        return (<div>
+        return (<div className="Movies">
         <h3>Search Results</h3>
         <ul>
             {this.props.movies.length !== 0 ? this.props.movies.map((movie, index) => 

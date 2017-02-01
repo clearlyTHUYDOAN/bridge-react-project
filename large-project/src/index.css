@@ -49,3 +49,8 @@ form {
 .Movie p {
   font-style: italic;
 }
+
+.Movies ul {
+  position: relative;
+  left: -25px;
+}
