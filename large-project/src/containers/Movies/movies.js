@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 // Q. How to have it display nothing when no search has been performed?
-// a) Some condition linked to a different state change?
+// a) Some condition linked to a different state change or a combination of state changes?
 
 export default class Movies extends Component {
     render() {
