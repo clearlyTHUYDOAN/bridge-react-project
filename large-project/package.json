@@ -1,9 +1,15 @@
+/* We set NPM_CONFIG_PRODUCTION to true by default to install production dependencies only. 
+If you would like to install devDependencies, you can disable production mode:
+$ heroku config:set NPM_CONFIG_PRODUCTION=false
+However, since you usually don’t want all development dependencies in your production builds, 
+it’s preferable to move only the dependencies you actually need for production builds (bower, grunt, gulp, etc) into dependencies.*/
+
 {
   "name": "large-project",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.8.5"
+    "react-scripts": "0.8.5" //  
   },
   "dependencies": {
     "react-scripts": "0.8.5",
@@ -18,9 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postinstall": "npm start"
+    "postinstall": "npm start" // Tell Heroky how to run your app when you deploy it.
   },
-  "engines": {
+  "engines": { // Make sure production node and npm versions are the same as local.
     "node": "7.9.0",
     "npm": "4.2.0"
   }
